@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex LaunchX</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <!-- 
+      - Nombre
+      - Imágen
+      - Tipo de pokemón
+      - Estadísticas
+      - Movimientos 
+      -->
+</head>
+
+<body>
+
+  <main class="main">
+    <h1>Pokédex</h1>
+    <div class="search">
+      <input type="search" placeholder="Search your Pokémon" id="pokeName" name="pokeName">
+      <button onclick="fetchPokemon()"></button>
+    </div>
+    <!-- <section class="short-cards pokemon-container">
+      <article class="card">
+        <div class="card-image">
+          <img src="./images/pokeball.png" alt="Pokemon" id="m_img" width="150px" height="150px">
+        </div>
+        <div class="card-body">
+          <div class="card-description">
+            <strong id="m_id" class="p_id"></strong>
+            <h3 id="m_name" class="name"> Nombre </h3>
+            <ul id="m_type" class="tipo-de-pokemon">
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-image">
+          <img src="./images/pokeball.png" alt="Pokemon" id="m_img" width="150px" height="150px">
+        </div>
+        <div class="card-body">
+          <div class="card-description">
+            <strong id="m_id" class="p_id"></strong>
+            <h3 id="m_name" class="name"> Nombre </h3>
+            <ul id="m_type" class="tipo-de-pokemon">
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-image">
+          <img src="./images/pokeball.png" alt="Pokemon" id="m_img" width="150px" height="150px">
+        </div>
+        <div class="card-body">
+          <div class="card-description">
+            <strong id="m_id" class="p_id"></strong>
+            <h3 id="m_name" class="name"> Nombre </h3>
+            <ul id="m_type" class="tipo-de-pokemon">
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section> -->
+    <!-- <nav class="pagination" aria-label="...">
+      <ul class="pagination">
+        <li class="page-item" id="previous">
+          <a class="page-link" href="#" tabindex="-1">Anterior</a>
+        </li>
+        <li class="page-item" id="next">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav> -->
+  </main>
+  <aside class="sidebar">
+    <article class="card">
+      <div class="card-image">
+        <img src="./images/pokeball.png" alt="Pokemon" id="pokeImg" width="150px" height="150px">
+      </div>
+      <div class="card-body">
+        <div class="card-description">
+          <strong id="p_id" class="p_id"></strong>
+          <h2 id="p_name" class="name"> Nombre </h2>
+          <ul id="p_type" class="tipo-de-pokemon">
+          </ul>
+        </div>
+        <div class="card-info">
+          <div class="card-tab estadisticas">
+            <h3>Estadísticas</h3>
+
+            <div id="p_stats" class="base-stats">
+            </div>
+          </div>
+          <div class="card-tab movimientos">
+            <h3>Movimientos</h3>
+            <ul id="ability" class="ability">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+  </aside>
+
+</body>
+<footer>
+  <script src="./js/pokedex.js"></script>
+</footer>
+
+</html>

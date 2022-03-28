@@ -1,0 +1,16 @@
+.short-cards {
+  display: none;
+  .card {
+      grid-column: 1 / -1;
+  }
+  @media only screen and (min-width: $lvl2){
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1em;
+  }
+  @media only screen and (min-width: $lvl3){
+    .card {
+      grid-column: span 2;
+    }
+  }
+}
