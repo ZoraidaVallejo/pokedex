@@ -1,0 +1,76 @@
+@import 'modules/colors',
+  'modules/layout';
+
+@import 'partials/search',
+'partials/card',
+'partials/short-cards';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  background-color: $gray;
+  font-family: "Didact Gothic", sans-serif;
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heebo/v18/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EbiusdUmg7UiCXB5W.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+  max-width: $max;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 25px;
+  padding: 0 1em;
+  overflow: hidden;
+}
+
+.main {
+  grid-column: span 6;
+}
+
+.sidebar {
+  grid-column: span 6;
+}
+
+/* @media only screen and (min-width: $lvl2){
+  
+  body {
+    grid-gap: 10px;
+  }
+  .main {
+    grid-column: span 3;
+  }
+  
+  .sidebar {
+    grid-column: span 3;
+  }
+} */
+
+@media only screen and (min-width: $lvl3){ 
+  .body {
+    grid-gap: 25px;
+  }
+  .main {
+    grid-column: span 6;
+  }
+  
+  .sidebar {
+    // grid-column: span 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+h1 {
+  color: $red;
+}
